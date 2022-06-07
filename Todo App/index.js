@@ -70,7 +70,7 @@ function deleteTodo(index) {
 function pendingTasks() {
     let getLocalStorage = localStorage.getItem("todos");
     todosArray = JSON.parse(getLocalStorage);
-    if(todosArray.length > 0) {
+    if(todosArray?.length > 0) {
         pendingTasksEl.textContent = `Pending Tasks: ${todosArray.length}`
     } else {
         pendingTasksEl.textContent = `You have no pending tasks`
